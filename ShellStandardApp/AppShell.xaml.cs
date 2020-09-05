@@ -11,6 +11,7 @@ namespace ShellStandardApp
 		{
 			InitializeComponent();
 
+			// Register Route to Edit Page 
 			Routing.RegisterRoute(nameof(EditPage), typeof(EditPage));
 		}
 	}

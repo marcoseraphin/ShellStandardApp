@@ -6,6 +6,9 @@ using ShellStandardApp.Models;
 
 namespace ShellStandardApp.Services
 {
+	/// <summary>
+	/// Sample Mock DataService
+	/// </summary>
 	public class MockDataService : IDataService<Person>
 	{
 		readonly List<Person> items;

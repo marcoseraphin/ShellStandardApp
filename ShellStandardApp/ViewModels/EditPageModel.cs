@@ -10,6 +10,9 @@ namespace ShellStandardApp.ViewModels
 	[QueryProperty(nameof(ItemId), nameof(ItemId))]
 	public class EditPageModel : BaseViewModel
 	{
+		/// <summary>
+		/// ItemId for parameter Person ID
+		/// </summary>
 		private string itemId;
 		public string ItemId
 		{
@@ -24,6 +27,9 @@ namespace ShellStandardApp.ViewModels
 			}
 		}
 
+		/// <summary>
+		/// Current person
+		/// </summary>
 		private Person _Person;
 		public Person Person
 		{
@@ -44,6 +50,10 @@ namespace ShellStandardApp.ViewModels
 			SaveNameCommand = new Command(OnSaveName);
 		}
 
+		/// <summary>
+		/// Load person by given ID from parameter
+		/// </summary>
+		/// <param name="itemId"></param>
 		public async void LoadPersonById(string itemId)
 		{
 			try
@@ -57,6 +67,10 @@ namespace ShellStandardApp.ViewModels
 			}
 		}
 
+		/// <summary>
+		/// OnSaveName
+		/// </summary>
+		/// <param name="obj"></param>
 		private async void OnSaveName(object obj)
 		{
 			await this.DataService.UpdateItemAsync(this.Person);

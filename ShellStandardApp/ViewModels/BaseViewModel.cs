@@ -10,8 +10,20 @@ namespace ShellStandardApp.ViewModels
 {
 	public class BaseViewModel : INotifyPropertyChanged
 	{
+		/// <summary>
+		/// Access to DataService from every ViewModel
+		/// </summary>
 		public IDataService<Person> DataService => DependencyService.Get<IDataService<Person>>();
 
+		/// <summary>
+		/// SetProperty 
+		/// </summary>
+		/// <typeparam name="T"></typeparam>
+		/// <param name="backingStore"></param>
+		/// <param name="value"></param>
+		/// <param name="propertyName"></param>
+		/// <param name="onChanged"></param>
+		/// <returns></returns>
 		protected bool SetProperty<T>(ref T backingStore, T value,
 			[CallerMemberName] string propertyName = "",
 			Action onChanged = null)

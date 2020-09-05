@@ -4,6 +4,10 @@ using System.Threading.Tasks;
 
 namespace ShellStandardApp.Services
 {
+	/// <summary>
+	/// DataService interface for accessing data
+	/// </summary>
+	/// <typeparam name="T"></typeparam>
 	public interface IDataService<T>
 	{
 		Task<bool> AddItemAsync(T item);

@@ -11,8 +11,10 @@ namespace ShellStandardApp
 		{
 			InitializeComponent();
 
+			// Register DataService here with MockDataService
 			DependencyService.Register<MockDataService>();
-			
+
+			// MainPage is AppShell page
 			MainPage = new AppShell();
 		}
 
