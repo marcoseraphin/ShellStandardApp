@@ -12,11 +12,14 @@ using Xamarin.Forms;
 namespace ShellStandardApp.ViewModels
 {
 	public class StartPageModel : BaseViewModel
-	{	
+	{
+		/// <summary>
+		/// For routing reasons only
+		/// </summary>
 		private string ItemId;
 		
 		/// <summary>
-		/// Current person
+		/// Selected person
 		/// </summary>
 		private Person _SelectedPerson;
 		public Person SelectedPerson
@@ -25,10 +28,12 @@ namespace ShellStandardApp.ViewModels
 			set
 			{
 				SetProperty(ref _SelectedPerson, value);
-				OnPropertyChanged(nameof(Person));
 			}
 		}
 
+		/// <summary>
+		/// CollectionView person item source
+		/// </summary>
 		private ObservableCollection<Person> _PersonList;
 		public ObservableCollection<Person> PersonList
 		{
@@ -36,28 +41,19 @@ namespace ShellStandardApp.ViewModels
 			set
 			{
 				SetProperty(ref _PersonList, value);
-				OnPropertyChanged(nameof(PersonList));
 			}
 		}
 
+		/// <summary>
+		/// Commands
+		/// </summary>
 		public ICommand EditNameCommand { get; }
 		public ICommand SelectionChangedCommand { get; }
 		public ICommand RefreshCommand { get; }
 
 		/// <summary>
-		/// ctor
+		/// IsRefreshing
 		/// </summary>
-		public StartPageModel()
-		{
-			MainThread.BeginInvokeOnMainThread(async () =>
-			{
-				this.PersonList =new ObservableCollection<Person>(await this.DataService.GetItemsAsync(true));
-			});
-			 
-			this.SelectionChangedCommand = new Command(OnSelectedChanged);
-			this.RefreshCommand = new Command(RefreshData);
-		}
-
 		private bool _IsRefreshing;
 		public bool IsRefreshing
 		{
@@ -65,19 +61,41 @@ namespace ShellStandardApp.ViewModels
 			set => SetProperty(ref _IsRefreshing, value);
 		}
 
+		/// <summary>
+		/// RefreshData
+		/// </summary>
 		public void RefreshData()
 		{
 			MainThread.BeginInvokeOnMainThread(async () =>
 			{
+				this.PersonList.Clear();
 				this.PersonList = new ObservableCollection<Person>(await this.DataService.GetItemsAsync(true));
 			});
 
 			this.IsRefreshing = false;
 		}
 
+		/// <summary>
+		/// Navigate using route to Edit Page
+		/// </summary>
+		/// <param name="obj"></param>
 		private async void OnSelectedChanged(object obj)
 		{	
 			await Shell.Current.GoToAsync($"{nameof(EditPage)}?{nameof(StartPageModel.ItemId)}={this.SelectedPerson.Id}");	
-		}	
+		}
+		/// <summary>
+		/// ctor
+		/// </summary>
+		public StartPageModel()
+		{
+			MainThread.BeginInvokeOnMainThread(async () =>
+			{
+				this.PersonList = new ObservableCollection<Person>(await this.DataService.GetItemsAsync(true));
+			});
+
+			this.SelectionChangedCommand = new Command(OnSelectedChanged);
+			this.RefreshCommand = new Command(RefreshData);
+		}
+
 	}
 }

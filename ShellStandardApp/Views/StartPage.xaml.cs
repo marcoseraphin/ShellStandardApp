@@ -20,13 +20,14 @@ namespace ShellStandardApp.Views
 		protected override void OnAppearing()
 		{
 			base.OnAppearing();
-			StartPageModel startPageModel = (StartPageModel)this.BindingContext;
-			MainThread.BeginInvokeOnMainThread(async () =>
-			{
-				//startPageModel.SelectedPerson = null;
-				startPageModel.PersonList = new ObservableCollection<Person>(await startPageModel.DataService.GetItemsAsync(true));
-				startPageModel.RefreshData();
-			});	
+
+			//StartPageModel startPageModel = (StartPageModel)this.BindingContext;
+			//MainThread.BeginInvokeOnMainThread(async () =>
+			//{
+			//	//startPageModel.SelectedPerson = null;
+			//	//startPageModel.PersonList = new ObservableCollection<Person>(await startPageModel.DataService.GetItemsAsync(true));
+			//	startPageModel.RefreshData();
+			//});	
 		}
 	}
 }
