@@ -76,6 +76,7 @@ namespace ShellStandardApp.ViewModels
 			//await this.DataService.UpdateItemAsync(this.Person);
 			await Shell.Current.GoToAsync("..");
 
+
 			//await Shell.Current.GoToAsync("..?" + nameof(EditPageModel.ItemId) + "=" + this.ItemId);
 		}
 	}
