@@ -17,9 +17,9 @@ namespace ShellStandardApp.Services
 		{
 			items = new List<Person>()
 			{
-				new Person { Id = Guid.NewGuid().ToString(), Name = "Marco Seraphin" },
-				new Person { Id = Guid.NewGuid().ToString(), Name = "Peter Wald" },
-				new Person { Id = Guid.NewGuid().ToString(), Name = "Stefanie Gerdes" }
+				new Person { Id = Guid.NewGuid().ToString(), Name = "Marco Seraphin", ImageUrl = "gender.png", Location = "Bad Münstereifel", Details = "Admin" },
+				new Person { Id = Guid.NewGuid().ToString(), Name = "Peter Wald", ImageUrl = "gender.png", Location = "Köln", Details = "Benutzter"  },
+				new Person { Id = Guid.NewGuid().ToString(), Name = "Stefanie Gerdes", ImageUrl = "gender.png", Location = "Dortmund", Details = "Benutzer"  }
 			};
 		}
 

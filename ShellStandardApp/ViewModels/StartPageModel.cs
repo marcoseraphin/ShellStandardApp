@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Diagnostics;
 using System.Linq;
 using System.Windows.Input;
@@ -10,82 +11,73 @@ using Xamarin.Forms;
 
 namespace ShellStandardApp.ViewModels
 {
-	[QueryProperty(nameof(ItemId), nameof(ItemId))]
 	public class StartPageModel : BaseViewModel
-	{
-		/// <summary>
-		/// ItemId for return parameter Person ID
-		/// </summary>
-		private string itemId;
-		public string ItemId
-		{
-			get
-			{
-				return this.Person.Id;
-			}
-			set
-			{
-				itemId = Uri.UnescapeDataString(value); 
-				LoadPersonById(value);
-			}
-		}
-
+	{	
+		private string ItemId;
+		
 		/// <summary>
 		/// Current person
 		/// </summary>
-		private Person _Person;
-		public Person Person
+		private Person _SelectedPerson;
+		public Person SelectedPerson
 		{
-			get => _Person;
+			get => _SelectedPerson;
 			set
 			{
-				SetProperty(ref _Person, value);
+				SetProperty(ref _SelectedPerson, value);
 				OnPropertyChanged(nameof(Person));
 			}
 		}
 
+		private ObservableCollection<Person> _PersonList;
+		public ObservableCollection<Person> PersonList
+		{
+			get => _PersonList;
+			set
+			{
+				SetProperty(ref _PersonList, value);
+				OnPropertyChanged(nameof(PersonList));
+			}
+		}
+
 		public ICommand EditNameCommand { get; }
+		public ICommand SelectionChangedCommand { get; }
+		public ICommand RefreshCommand { get; }
 
 		/// <summary>
 		/// ctor
 		/// </summary>
 		public StartPageModel()
 		{
-			MainThread.BeginInvokeOnMainThread(async() =>
+			MainThread.BeginInvokeOnMainThread(async () =>
 			{
-				IEnumerable<Person> personList = await this.DataService.GetItemsAsync(true);
-				this.Person = personList.First();
+				this.PersonList =new ObservableCollection<Person>(await this.DataService.GetItemsAsync(true));
 			});
-	
-			EditNameCommand = new Command(OnEditName);
+			 
+			this.SelectionChangedCommand = new Command(OnSelectedChanged);
+			this.RefreshCommand = new Command(RefreshData);
 		}
 
-		/// <summary>
-		/// Load person by given ID from parameter
-		/// </summary>
-		/// <param name="itemId"></param>
-		public async void LoadPersonById(string itemId)
+		private bool _IsRefreshing;
+		public bool IsRefreshing
 		{
-			try
-			{
-				var person = await this.DataService.GetItemAsync(itemId);
-				this.Person = person;
-			}
-			catch (Exception)
-			{
-				Debug.WriteLine("Failed to Load Person with ID = " + itemId);
-			}
+			get => _IsRefreshing;
+			set => SetProperty(ref _IsRefreshing, value);
 		}
 
-		/// <summary>
-		/// Navigate to Edit Page with current Person ID as parameter which
-		/// will be loaded from DataService in Edit Page
-		/// </summary>
-		/// <param name="obj"></param>
-		private async void OnEditName(object obj)
+		public void RefreshData()
 		{
-			await Shell.Current.GoToAsync($"{nameof(EditPage)}?{nameof(StartPageModel.ItemId)}={this.ItemId}");
+			MainThread.BeginInvokeOnMainThread(async () =>
+			{
+				this.PersonList = new ObservableCollection<Person>(await this.DataService.GetItemsAsync(true));
+			});
+
+			this.IsRefreshing = false;
 		}
 
+		private async void OnSelectedChanged(object obj)
+		{	
+			await Shell.Current.GoToAsync($"{nameof(EditPage)}?{nameof(StartPageModel.ItemId)}={this.SelectedPerson.Id}");	
+		}	
 	}
 }

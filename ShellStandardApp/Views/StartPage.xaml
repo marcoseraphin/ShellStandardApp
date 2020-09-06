@@ -1,11 +1,27 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:controls="clr-namespace:ShellStandardApp.Controls.SearchHandlers"
+             xmlns:views="clr-namespace:ShellStandardApp.Views"
+             xmlns:viewmodels="clr-namespace:ShellStandardApp.ViewModels"
              Title="Start Page"
              x:Class="ShellStandardApp.Views.StartPage">
-    <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
-        <Label Text="Start Page" FontSize="44"/>
-        <Label Text="{Binding Person.Name}" FontSize="20" TextColor="Red" Margin="0,100,0,0" HorizontalOptions="CenterAndExpand" />
-        <Button Text="Edit Name" Command="{Binding EditNameCommand}" Margin="0,30,0,0" />
-    </StackLayout>
+
+    <Shell.SearchHandler>
+        <controls:PersonSearchHandler Placeholder="Person suchen"
+                                        ShowsResults="true"
+                                        DisplayMemberName="Name"
+                                        SearchBoxVisibility="Expanded"
+                                        ItemTemplate="{StaticResource PersonSearchTemplate}"
+                                        SelectedItemNavigationTarget="{x:Type views:EditPage}" />
+    </Shell.SearchHandler>
+    <RefreshView IsRefreshing="{Binding IsRefreshing}"
+             Command="{Binding RefreshCommand}">
+        <CollectionView Margin="20"
+                ItemsSource="{Binding PersonList}"
+                ItemTemplate="{StaticResource PersonTemplate}"
+                SelectionMode="Single"
+                SelectedItem="{Binding SelectedPerson}"
+                SelectionChangedCommand="{Binding SelectionChangedCommand}" />
+    </RefreshView>
 </ContentPage>

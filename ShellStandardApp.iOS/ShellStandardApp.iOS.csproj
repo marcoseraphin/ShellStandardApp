@@ -140,5 +140,8 @@
     <BundleResource Include="Resources\tab_feed.png" />
     <BundleResource Include="Resources\tab_feed%402x.png" />
     <BundleResource Include="Resources\tab_feed%403x.png" />
+    <BundleResource Include="Resources\gender.png" />
+    <BundleResource Include="Resources\gender%402x.png" />
+    <BundleResource Include="Resources\gender%403x.png" />
   </ItemGroup>
 </Project>

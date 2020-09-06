@@ -74,7 +74,9 @@ namespace ShellStandardApp.ViewModels
 		private async void OnSaveName(object obj)
 		{
 			await this.DataService.UpdateItemAsync(this.Person);
-			await Shell.Current.GoToAsync("..?" + nameof(EditPageModel.ItemId) + "=" + this.ItemId);
+			await Shell.Current.GoToAsync("..");
+
+			//await Shell.Current.GoToAsync("..?" + nameof(EditPageModel.ItemId) + "=" + this.ItemId);
 		}
 	}
 }
