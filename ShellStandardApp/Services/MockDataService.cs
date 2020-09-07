@@ -57,7 +57,7 @@ namespace ShellStandardApp.Services
 
 		public async Task<IEnumerable<Person>> GetItemsAsync(bool forceRefresh = false)
 		{
-			return await Task.FromResult(items);
+			return await Task.FromResult(items.OrderBy(p => p.Name));
 		}
 	}
 }

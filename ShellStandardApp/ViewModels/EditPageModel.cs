@@ -66,6 +66,7 @@ namespace ShellStandardApp.ViewModels
 					Id = person.Id,
 					Name = person.Name,
 					Details = person.Details,
+					Location = person.Location,
 					ImageUrl = person.ImageUrl	
 				};
 			}

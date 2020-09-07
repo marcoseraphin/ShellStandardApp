@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.Linq;
-using ShellStandardApp.Models;
-using ShellStandardApp.ViewModels;
+﻿using ShellStandardApp.ViewModels;
 using Xamarin.Essentials;
 using Xamarin.Forms;
 
@@ -16,15 +11,20 @@ namespace ShellStandardApp.Views
 			InitializeComponent();
 			this.BindingContext = new StartPageModel();
 		}
-		 
+
+		/// <summary>
+		/// OnAppearing
+		/// </summary>
 		protected override void OnAppearing()
 		{
 			base.OnAppearing();
 
+			// Refresh person list and deselect last selected person
 			StartPageModel startPageModel = (StartPageModel)this.BindingContext;
 			MainThread.BeginInvokeOnMainThread(() =>
 			{
 				startPageModel.RefreshData();
+				startPageModel.SelectedPerson = null;
 			});
 		}
 	}

@@ -80,9 +80,13 @@ namespace ShellStandardApp.ViewModels
 		/// </summary>
 		/// <param name="obj"></param>
 		private async void OnSelectedChanged(object obj)
-		{	
-			await Shell.Current.GoToAsync($"{nameof(EditPage)}?{nameof(StartPageModel.ItemId)}={this.SelectedPerson.Id}");	
+		{
+			if (this.SelectedPerson != null)
+			{
+				await Shell.Current.GoToAsync($"{nameof(EditPage)}?{nameof(StartPageModel.ItemId)}={this.SelectedPerson.Id}");
+			}
 		}
+
 		/// <summary>
 		/// ctor
 		/// </summary>
