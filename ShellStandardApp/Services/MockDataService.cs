@@ -19,7 +19,10 @@ namespace ShellStandardApp.Services
 			{
 				new Person { Id = Guid.NewGuid().ToString(), Name = "Marco Seraphin", ImageUrl = "gender.png", Location = "Bad Münstereifel", Details = "Admin" },
 				new Person { Id = Guid.NewGuid().ToString(), Name = "Peter Wald", ImageUrl = "gender.png", Location = "Köln", Details = "Benutzter"  },
-				new Person { Id = Guid.NewGuid().ToString(), Name = "Stefanie Gerdes", ImageUrl = "gender.png", Location = "Dortmund", Details = "Benutzer"  }
+				new Person { Id = Guid.NewGuid().ToString(), Name = "Stefanie Gerdes", ImageUrl = "gender.png", Location = "Dortmund", Details = "Benutzer"  },
+				new Person { Id = Guid.NewGuid().ToString(), Name = "Frank Müller", ImageUrl = "gender.png", Location = "Hagen", Details = "Admin" },
+				new Person { Id = Guid.NewGuid().ToString(), Name = "Bernd Steffens", ImageUrl = "gender.png", Location = "Berlin", Details = "Benutzter"  },
+				new Person { Id = Guid.NewGuid().ToString(), Name = "Udo Meier", ImageUrl = "gender.png", Location = "Stuttgart", Details = "Benutzer"  }
 			};
 		}
 

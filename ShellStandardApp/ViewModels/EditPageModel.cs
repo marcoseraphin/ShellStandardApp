@@ -59,7 +59,15 @@ namespace ShellStandardApp.ViewModels
 			try
 			{
 				var person = await this.DataService.GetItemAsync(itemId);
-				this.Person = person;
+
+				// Copy person from parameter for breaking reference to DataService entry
+				this.Person = new Person()
+				{
+					Id = person.Id,
+					Name = person.Name,
+					Details = person.Details,
+					ImageUrl = person.ImageUrl	
+				};
 			}
 			catch (Exception)
 			{
@@ -73,7 +81,7 @@ namespace ShellStandardApp.ViewModels
 		/// <param name="obj"></param>
 		private async void OnSaveName(object obj)
 		{
-			//await this.DataService.UpdateItemAsync(this.Person);
+			await this.DataService.UpdateItemAsync(this.Person);
 			await Shell.Current.GoToAsync("..");
 
 
