@@ -13,7 +13,7 @@ namespace ShellStandardApp.ViewModels
 		/// <summary>
 		/// Access to DataService from every ViewModel
 		/// </summary>
-		public IDataService<Person> DataService => DependencyService.Get<IDataService<Person>>();
+		protected IDataService<Person> DataService => DependencyService.Get<IDataService<Person>>();
 
 		/// <summary>
 		/// SetProperty 
@@ -51,7 +51,7 @@ namespace ShellStandardApp.ViewModels
 
 		#endregion
 
-		public BaseViewModel()
+		protected BaseViewModel()
 		{
 		}
 	}
