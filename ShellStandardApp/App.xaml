@@ -4,6 +4,7 @@
              x:Class="ShellStandardApp.App">
 
     <Application.Resources>
+        
         <DataTemplate x:Key="PersonSearchTemplate">
             <Grid Padding="10">
                 <Grid.ColumnDefinitions>

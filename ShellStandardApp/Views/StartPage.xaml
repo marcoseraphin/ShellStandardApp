@@ -8,9 +8,8 @@
              x:Class="ShellStandardApp.Views.StartPage">
 
     <Shell.SearchHandler>
-        <controls:PersonSearchHandler Placeholder="Person suchen"
+        <controls:PersonSearchHandler Placeholder="Search Person"
                                         ShowsResults="true"
-                                        DisplayMemberName="Name"
                                         SearchBoxVisibility="Expanded"
                                         ItemTemplate="{StaticResource PersonSearchTemplate}"
                                         SelectedItemNavigationTarget="{x:Type views:EditPage}" />
