@@ -1,10 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.Diagnostics;
-using System.Linq;
+﻿using System.Collections.ObjectModel;
 using System.Windows.Input;
 using ShellStandardApp.Models;
+using ShellStandardApp.Services;
 using ShellStandardApp.Views;
 using Xamarin.Essentials;
 using Xamarin.Forms;
@@ -13,6 +10,11 @@ namespace ShellStandardApp.ViewModels
 {
 	public class StartPageModel : BaseViewModel
 	{
+		/// <summary>
+		/// DataService
+		/// </summary>
+		private IDataService<Person> dataService = null;
+
 		/// <summary>
 		/// For routing reasons only
 		/// </summary>
@@ -69,7 +71,7 @@ namespace ShellStandardApp.ViewModels
 			MainThread.BeginInvokeOnMainThread(async () =>
 			{
 				this.PersonList.Clear();
-				this.PersonList = new ObservableCollection<Person>(await this.DataService.GetItemsAsync(true));
+				this.PersonList = new ObservableCollection<Person>(await this.dataService.GetItemsAsync(true));
 			});
 
 			this.IsRefreshing = false;
@@ -92,14 +94,16 @@ namespace ShellStandardApp.ViewModels
 		/// </summary>
 		public StartPageModel()
 		{
+			this.dataService = App.IoCContainer.GetInstance<IDataService<Person>>();
+
 			MainThread.BeginInvokeOnMainThread(async () =>
 			{
-				this.PersonList = new ObservableCollection<Person>(await this.DataService.GetItemsAsync(true));
+				this.PersonList = new ObservableCollection<Person>(await dataService.GetItemsAsync(true));
+				//this.PersonList = new ObservableCollection<Person>(await this.DataService.GetItemsAsync(true));
 			});
 
 			this.SelectionChangedCommand = new Command(OnSelectedChanged);
 			this.RefreshCommand = new Command(RefreshData);
 		}
-
 	}
 }

@@ -2,6 +2,7 @@
 using System.Diagnostics;
 using System.Windows.Input;
 using ShellStandardApp.Models;
+using ShellStandardApp.Services;
 using ShellStandardApp.Views;
 using Xamarin.Forms;
 
@@ -58,7 +59,8 @@ namespace ShellStandardApp.ViewModels
 		{
 			try
 			{
-				var person = await this.DataService.GetItemAsync(itemId);
+				IDataService<Person> dataService = App.IoCContainer.GetInstance<IDataService<Person>>();
+				var person = await dataService.GetItemAsync(itemId);
 
 				// Copy person from parameter for breaking reference to DataService entry
 				this.Person = new Person()
@@ -82,7 +84,9 @@ namespace ShellStandardApp.ViewModels
 		/// <param name="obj"></param>
 		private async void OnSaveName(object obj)
 		{
-			await this.DataService.UpdateItemAsync(this.Person);
+			IDataService<Person> dataService = App.IoCContainer.GetInstance<IDataService<Person>>();
+
+			await dataService.UpdateItemAsync(this.Person);
 			await Shell.Current.GoToAsync("..");
 
 

@@ -54,7 +54,8 @@ namespace ShellStandardApp.Controls.SearchHandlers
             // Get search item source data
             MainThread.BeginInvokeOnMainThread(async () =>
             {
-                var dataService = DependencyService.Resolve<IDataService<Person>>();
+                //var dataService = DependencyService.Resolve<IDataService<Person>>();
+                IDataService<Person> dataService = App.IoCContainer.GetInstance<IDataService<Person>>();
                 this.PersonQueryList = new List<Person>(await dataService.GetItemsAsync(true)); 
             });
            

@@ -1,10 +1,7 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
-using ShellStandardApp.Models;
-using ShellStandardApp.Services;
-using Xamarin.Forms;
 
 namespace ShellStandardApp.ViewModels
 {
@@ -13,7 +10,7 @@ namespace ShellStandardApp.ViewModels
 		/// <summary>
 		/// Access to DataService from every ViewModel
 		/// </summary>
-		protected IDataService<Person> DataService => DependencyService.Get<IDataService<Person>>();
+		//protected IDataService<Person> DataService => DependencyService.Get<IDataService<Person>>();
 
 		/// <summary>
 		/// SetProperty 
@@ -48,7 +45,6 @@ namespace ShellStandardApp.ViewModels
 
 			changed.Invoke(this, new PropertyChangedEventArgs(propertyName));
 		}
-
 		#endregion
 
 		protected BaseViewModel()
