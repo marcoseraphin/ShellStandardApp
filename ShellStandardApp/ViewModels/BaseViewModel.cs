@@ -8,11 +8,6 @@ namespace ShellStandardApp.ViewModels
 	public class BaseViewModel : INotifyPropertyChanged
 	{
 		/// <summary>
-		/// Access to DataService from every ViewModel
-		/// </summary>
-		//protected IDataService<Person> DataService => DependencyService.Get<IDataService<Person>>();
-
-		/// <summary>
 		/// SetProperty 
 		/// </summary>
 		/// <typeparam name="T"></typeparam>

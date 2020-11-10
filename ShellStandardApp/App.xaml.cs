@@ -9,6 +9,9 @@ namespace ShellStandardApp
 {
 	public partial class App : Application
 	{
+		/// <summary>
+		/// IoCContainer
+		/// </summary>
 		private static Container ioCContainer = new SimpleInjector.Container();
 		public static Container IoCContainer
 		{
@@ -20,11 +23,9 @@ namespace ShellStandardApp
 		{
 			InitializeComponent();
 
-
+			// Register MockData Service
 			ioCContainer.Register<IDataService<Person>, MockDataService>(Lifestyle.Singleton);
 
-			// Register DataService here with MockDataService
-			//DependencyService.Register<MockDataService>();
 
 			// MainPage is AppShell page
 			MainPage = new AppShell();
