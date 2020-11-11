@@ -11,11 +11,6 @@ namespace ShellStandardApp.ViewModels
 	public class StartPageModel : BaseViewModel
 	{
 		/// <summary>
-		/// DataService
-		/// </summary>
-		private IDataService<Person> dataService = null;
-
-		/// <summary>
 		/// For routing reasons only
 		/// </summary>
 		private string ItemId;
@@ -71,7 +66,7 @@ namespace ShellStandardApp.ViewModels
 			MainThread.BeginInvokeOnMainThread(async () =>
 			{
 				this.PersonList.Clear();
-				this.PersonList = new ObservableCollection<Person>(await this.dataService.GetItemsAsync(true));
+				this.PersonList = new ObservableCollection<Person>(await App.DataService.GetItemsAsync(true));
 			});
 
 			this.IsRefreshing = false;
@@ -94,11 +89,11 @@ namespace ShellStandardApp.ViewModels
 		/// </summary>
 		public StartPageModel()
 		{
-			this.dataService = App.IoCContainer.GetInstance<IDataService<Person>>();
+			//this.dataService = App.IoCContainer.GetInstance<IDataService<Person>>();
 
 			MainThread.BeginInvokeOnMainThread(async () =>
 			{
-				this.PersonList = new ObservableCollection<Person>(await dataService.GetItemsAsync(true));
+				this.PersonList = new ObservableCollection<Person>(await App.DataService.GetItemsAsync(true));
 				//this.PersonList = new ObservableCollection<Person>(await this.DataService.GetItemsAsync(true));
 			});
 

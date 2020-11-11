@@ -19,13 +19,18 @@ namespace ShellStandardApp
 			set => ioCContainer = value;
 		}
 
+		/// <summary>
+		/// DataService
+		/// </summary>
+		public static IDataService<Person> DataService = null;
+
 		public App()
 		{
 			InitializeComponent();
 
 			// Register MockData Service
 			ioCContainer.Register<IDataService<Person>, MockDataService>(Lifestyle.Singleton);
-
+			DataService = IoCContainer.GetInstance<IDataService<Person>>();
 
 			// MainPage is AppShell page
 			MainPage = new AppShell();

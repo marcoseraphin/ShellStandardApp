@@ -14,7 +14,6 @@ namespace ShellStandardApp.Controls.SearchHandlers
     {
         public Type SelectedItemNavigationTarget { get; set; }
         private IList<Person> PersonQueryList;
-        private IDataService<Person> dataService = null;
 
         protected override async void OnQueryChanged(string oldValue, string newValue)
         {
@@ -26,7 +25,7 @@ namespace ShellStandardApp.Controls.SearchHandlers
             }
             else
             {
-                this.PersonQueryList = new List<Person>(await dataService.GetItemsAsync(true));
+                this.PersonQueryList = new List<Person>(await App.DataService.GetItemsAsync(true));
 
                 ItemsSource = this.PersonQueryList
                                   .Where(person => person.Name.ToLower().Contains(newValue.ToLower()))
@@ -57,9 +56,7 @@ namespace ShellStandardApp.Controls.SearchHandlers
             // Get search item source data
             MainThread.BeginInvokeOnMainThread(async () =>
             {
-                //var dataService = DependencyService.Resolve<IDataService<Person>>();
-                this.dataService = App.IoCContainer.GetInstance<IDataService<Person>>();
-                this.PersonQueryList = new List<Person>(await dataService.GetItemsAsync(true)); 
+                this.PersonQueryList = new List<Person>(await App.DataService.GetItemsAsync(true)); 
             });
            
 		}

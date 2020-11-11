@@ -59,8 +59,8 @@ namespace ShellStandardApp.ViewModels
 		{
 			try
 			{
-				IDataService<Person> dataService = App.IoCContainer.GetInstance<IDataService<Person>>();
-				var person = await dataService.GetItemAsync(itemId);
+				//IDataService<Person> dataService = App.IoCContainer.GetInstance<IDataService<Person>>();
+				var person = await App.DataService.GetItemAsync(itemId);
 
 				// Copy person from parameter for breaking reference to DataService entry
 				this.Person = new Person()
@@ -84,9 +84,9 @@ namespace ShellStandardApp.ViewModels
 		/// <param name="obj"></param>
 		private async void OnSaveName(object obj)
 		{
-			IDataService<Person> dataService = App.IoCContainer.GetInstance<IDataService<Person>>();
+			//IDataService<Person> dataService = App.IoCContainer.GetInstance<IDataService<Person>>();
 
-			await dataService.UpdateItemAsync(this.Person);
+			await App.DataService.UpdateItemAsync(this.Person);
 			await Shell.Current.GoToAsync("..");
 
 
