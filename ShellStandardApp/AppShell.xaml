@@ -5,7 +5,7 @@
        xmlns:controls="clr-namespace:ShellStandardApp.Controls;assembly=ShellStandardApp"
        x:Class="ShellStandardApp.AppShell">
     
-    <!--<Shell.FlyoutHeader>
+    <Shell.FlyoutHeader>
         <controls:FlyoutHeaderControl />
     </Shell.FlyoutHeader>
     <FlyoutItem Title="Start"
@@ -19,11 +19,18 @@
         <Tab>
             <ShellContent Title="About" Icon="tab_feed.png" Route="AboutPage"  ContentTemplate="{DataTemplate local:AboutPage}" />
         </Tab>
-    </FlyoutItem>-->
+    </FlyoutItem>
+
+     <FlyoutItem Title="Einstellungen"
+                Icon="tab_about.png">
+        <Tab>
+            <ShellContent Title="Einstellungen" Icon="tab_feed.png" Route="AboutPage"  ContentTemplate="{DataTemplate local:AboutPage}" />
+        </Tab>
+    </FlyoutItem>
     
-    <TabBar>
+    <!--<TabBar>
         <ShellContent Title="Start" Icon="tab_about.png" Route="StartPage" ContentTemplate="{DataTemplate local:StartPage}" />
         <ShellContent Title="About" Icon="tab_feed.png" Route="AboutPage"  ContentTemplate="{DataTemplate local:AboutPage}" />
-    </TabBar>
+    </TabBar>-->
 
 </Shell>

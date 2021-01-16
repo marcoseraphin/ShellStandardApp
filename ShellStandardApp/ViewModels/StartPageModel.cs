@@ -1,7 +1,6 @@
 ﻿using System.Collections.ObjectModel;
 using System.Windows.Input;
 using ShellStandardApp.Models;
-using ShellStandardApp.Services;
 using ShellStandardApp.Views;
 using Xamarin.Essentials;
 using Xamarin.Forms;
