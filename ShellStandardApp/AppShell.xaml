@@ -21,10 +21,10 @@
         </Tab>
     </FlyoutItem>
 
-     <FlyoutItem Title="Einstellungen"
+     <FlyoutItem Title="Settings"
                 Icon="tab_about.png">
         <Tab>
-            <ShellContent Title="Einstellungen" Icon="tab_feed.png" Route="AboutPage"  ContentTemplate="{DataTemplate local:AboutPage}" />
+            <ShellContent Title="Settings" Icon="tab_feed.png" Route="AboutPage"  ContentTemplate="{DataTemplate local:AboutPage}" />
         </Tab>
     </FlyoutItem>
     
