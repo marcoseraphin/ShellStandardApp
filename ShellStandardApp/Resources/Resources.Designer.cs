@@ -47,9 +47,9 @@ namespace ShellStandardApp.Resources {
             }
         }
         
-        internal static string APPNAME {
+        internal static string APP_NAME {
             get {
-                return ResourceManager.GetString("APPNAME", resourceCulture);
+                return ResourceManager.GetString("APP_NAME", resourceCulture);
             }
         }
         
