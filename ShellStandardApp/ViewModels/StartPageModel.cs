@@ -1,5 +1,6 @@
 ﻿using System.Collections.ObjectModel;
 using System.Windows.Input;
+using ShellStandardApp.Localization;
 using ShellStandardApp.Models;
 using ShellStandardApp.Views;
 using Xamarin.Essentials;
@@ -98,6 +99,10 @@ namespace ShellStandardApp.ViewModels
 
 			this.SelectionChangedCommand = new Command(OnSelectedChanged);
 			this.RefreshCommand = new Command(RefreshData);
+
+			string savedLanguage = Preferences.Get("Language", "en-GB");
+			MessagingCenter.Send<object, CultureChangedMessage>(this, string.Empty, new CultureChangedMessage(savedLanguage));
+
 		}
 	}
 }

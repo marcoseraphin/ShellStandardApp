@@ -2,11 +2,22 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
+using ShellStandardApp.Localization;
 
 namespace ShellStandardApp.ViewModels
 {
 	public class BaseViewModel : INotifyPropertyChanged
 	{
+
+		/// <summary>
+		/// LocalizedResources
+		/// </summary>
+		public LocalizedResources LocalizedResources
+		{
+			get;
+			private set;
+		}
+
 		/// <summary>
 		/// SetProperty 
 		/// </summary>
@@ -44,6 +55,8 @@ namespace ShellStandardApp.ViewModels
 
 		protected BaseViewModel()
 		{
+			LocalizedResources = new LocalizedResources(typeof(ShellStandardApp.Resources.Resources), "en-GB");
+
 		}
 	}
 }

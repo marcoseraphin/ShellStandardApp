@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Diagnostics;
 using System.Windows.Input;
+using ShellStandardApp.Localization;
 using ShellStandardApp.Models;
 using ShellStandardApp.Services;
 using ShellStandardApp.Views;
+using Xamarin.Essentials;
 using Xamarin.Forms;
 
 namespace ShellStandardApp.ViewModels
@@ -49,6 +51,9 @@ namespace ShellStandardApp.ViewModels
 		public EditPageModel()
 		{
 			SaveNameCommand = new Command(OnSaveName);
+
+			string savedLanguage = Preferences.Get("Language", "en-GB");
+			MessagingCenter.Send<object, CultureChangedMessage>(this, string.Empty, new CultureChangedMessage(savedLanguage));
 		}
 
 		/// <summary>

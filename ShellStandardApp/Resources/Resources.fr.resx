@@ -1,0 +1,796 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="ACCEPT_LICENCE_AGREEMENT" xml:space="preserve">
+    <value>Vous devez accepter les conditions d'utilisation.</value>
+  </data>
+  <data name="APPNAME" xml:space="preserve">
+    <value>SePem® Install Tool</value>
+  </data>
+  <data name="APP_GENERAL_INFORMATION" xml:space="preserve">
+    <value>Généralités</value>
+  </data>
+  <data name="APP_LICENCE_AGREEMENT" xml:space="preserve">
+    <value>Conditions d'utilisation</value>
+  </data>
+  <data name="APP_LICENSE_ACCEPT" xml:space="preserve">
+    <value>Accepter</value>
+  </data>
+  <data name="APP_LICENSE_CONTRACT" xml:space="preserve">
+    <value>Conditions d'utilisation SEWERIN</value>
+  </data>
+  <data name="APP_LICENSE_DECLINE" xml:space="preserve">
+    <value>Refuser</value>
+  </data>
+  <data name="APP_LICENSE_HEADLINE" xml:space="preserve">
+    <value>IMPORTANT - À lire attentivement avant d'utiliser le logiciel.</value>
+  </data>
+  <data name="APP_LICENSE_PDF" xml:space="preserve">
+    <value>Ouvrir les conditions d'utilisation au format PDF</value>
+  </data>
+  <data name="APP_LICENSE_TEXT" xml:space="preserve">
+    <value>Lorsque vous téléchargez l'application « SePem® Install Tool » à partir de Google Play Store ou d'Apple Store, un contrat d'utilisation de cette application est établi entre vous et Hermann Sewerin GmbH, Robert-Bosch-Straße 3, 33334 Gütersloh, Allemagne (ci-après « Sewerin »). 
+Google Inc., Apple Inc., les sociétés affiliées à Google Inc. ou à Apple Inc. ne sont pas parties au présent contrat. Google ou Apple sont cependant autorisés à faire valoir leurs droits à votre égard découlant du présent contrat d'utilisation. En téléchargeant l'application, vous acceptez les conditions d'utilisation suivantes. 
+
+§ 1 Utilisation de l'application
+Notez que l'utilisation de certaines fonctions de l'application nécessite une connexion de données de votre appareil, ou que cette dernière est établie par l'utilisation de ces fonctions. Par conséquent, nous conseillons de n'utiliser l'application qu'en présence de forfait de données ou de connexion WLAN, afin d'éviter des frais de connexion importants ou une consommation rapide du volume de données inclus. L'application et les services, données et informations accessibles par son intermédiaire sont intégralement protégés par le droit d'auteur.
+Lorsque vous téléchargez cette application gratuite, Sewerin vous accorde le droit gratuit, non exclusif et incessible d'utiliser l'application pour l'une des finalités énoncées dans les présentes conditions d'utilisation, et, conformément aux présentes conditions d'utilisations, sur un appareil dont vous êtes propriétaire ou en votre possession, sur lequel l'application peut fonctionner sur la base de la configuration système requise indiquée dans Google Play Store ou Apple Store.
+L'application est améliorée en permanence. Pour cette raison, de nouvelles fonctions peuvent régulièrement être proposées. Certaines nouvelles fonctions peuvent être payantes ou le devenir. Dans ce cas, Sewerin vous communiquera en temps voulu au préalable les prix et caractéristiques. Les fonctions de base restent cependant gratuites jusqu'à nouvel ordre. 
+Vous n'êtes pas autorisé à copier, distribuer ou mettre à disposition de tiers de toute autre façon (y compris par la location, la concession, le prêt ou la concession de sous-licence) cette application. La modification du code de programmation de l'application ou de parties de celui-ci, la rétro-ingénierie (reverse engineering), la décompilation, le désassemblage ou l'identification du code source de toute autre manière et la création d'œuvres dérivées à partir de celui-ci sont interdites. Ceci sans préjudice des dispositions des paragraphes 69d et 69e de la Loi allemande sur le droit d'auteur (UrhG). 
+Les conditions précédentes s'appliquent à toutes les mises à jour/mises à niveau (updates/upgrades) et à tout complément de programme pour l'application qui sont mis à disposition par Sewerin pour être téléchargés sur Google Play Store ou Apple Store, sauf s'ils font l'objet d'un contrat de licence séparé. Dans ce cas, seules les dispositions du contrat de licence en vigueur pour la mise à jour / mise à niveau ou le complément de programme en question font foi. 
+Sewerin se réserve tous les droits concernant l'application. 
+
+§ 2 Disponibilité des fonctions et services
+Sewerin met en œuvre des efforts raisonnables pour mettre à disposition tous les fonctions et services de l'application. Des difficultés techniques causant une interruption temporaire de la disponibilité peuvent cependant survenir. Vous ne pouvez pas présenter de réclamation à l'encontre de Sewerin en cas d'interruption de la disponibilité.
+
+§ 3 Obligation de collaboration
+Lors de l'utilisation de l'application, vous êtes tenu de respecter les obligations de diligence nécessaires et de vérifier de manière appropriée les résultats générés par l'application avant leur utilisation. 
+Vous acceptez que des mises à jour soient automatiquement appliquées, pour la résolution d'erreurs par exemples. Si des autorisations supplémentaires sont nécessaires pour les mises à jour, vous en serez informé avant son installation. Si vous n'accordez pas ces autorisations, la mise à jour ne sera pas effectuée, ce qui peut nuire au bon fonctionnement de l'application.
+
+§ 4 Garantie et responsabilité
+Sewerin n'est responsable des malfaçons et vices de droit, quel que soit leur fondement juridique, que si Sewerin a intentionnellement dissimulé la malfaçon ou le vice de droit en question. Par ailleurs, Sewerin, ses représentants légaux et ses auxiliaires d'exécution ne sont tenus à indemniser un dommage éventuel découlant de la mise à disposition gratuite de l'application qu'en cas de faute ou de mauvaise foi ou en cas de dommage fautif portant atteinte à la vie, au corps ou à la santé. Ceci sans préjudice de la loi allemande sur la responsabilité du fait des produits défectueux. 
+
+§ 5 Assistance
+En cas de problèmes lors de l'utilisation de l'application, vous pouvez contacter Sewerin aux coordonnées suivantes : Hermann Sewerin GmbH, Robert-Bosch-Straße 3, 33334 Gütersloh, Allemagne
+E-Mail : info@sewerin.com 
+Téléphone : +49 (0) 52 41/ 9 34- 0 
+Lors du traitement de votre demande, y compris lors de la prise de contact, les données à caractère personnel transmises par vos soins sont traitées pour les finalités définies. 
+En cas de demande d'assistance, nous pouvons être amenés à vous demander vos données personnelles. Vous pouvez fournir l'état du système (par exemple données personnelles, données de configuration, historique, données système) par e-mail au personnel du service d'assistance. 
+Pour le traitement de demandes supplémentaires et pour respecter ses obligations légales de documentation et de conservation, Sewerin conserve l'historique du client pendant 10 ans après la dernière interaction avec l'assistance client. Les données à caractère personnel spécifiques au problème sont conservées pendant huit semaines au maximum après résolution du problème et automatiquement effacées. 
+Sewerin n'assure l'assistance que pour la dernière version de l'application. 
+Pour plus d'informations sur le traitement des données à caractère personnel, consultez le § 6.
+
+§ 6 Protection des données
+Dans le cadre de l'utilisation de l'application et en cas de recours à des services complémentaires (assistance par exemple), Sewerin peut être amené à traiter vos données à caractère personnel. Le traitement des données à caractère personnel dans le cadre de l'utilisation de l'application est décrit en détails dans la  HYPERLINK "https://www.sewerin.com/cms/fileadmin/redakteure/images/Datenschutz/Datenschutzerklaerung_SePem300_App.pdf" Déclaration de confidentialité.
+
+§ 7 Violation des présentes conditions d'utilisation
+Vous vous engagez envers Sewerin à n'utiliser l'application que pour des finalités qui ne contreviennent pas aux présentes conditions d'utilisation ou à la législation en vigueur ou aux droits de tiers. Si vous autorisez un tiers à utiliser l'application sur votre appareil, il relève de votre devoir de diligence de porter les conditions d'utilisation à sa connaissance et de vous assurer qu'elles sont respectées. Sewerin peut bloquer l'accès à l'application si vous contrevenez à vos obligations énoncées dans les présentes dispositions. 
+
+§ 8 Modification des conditions d'utilisation
+Si Sewerin prévoit de modifier et/ou de compléter les présentes conditions d'utilisation ou certaines dispositions de celles-ci, Sewerin vous en informera expressément et vous permettra d’accéder au texte modifié. 
+
+§ 9 Droit applicable, tribunal compétent
+Le droit de la République fédérale d'Allemagne s'applique, à l'exclusion de la convention des Nations Unies sur les contrats de vente internationale de marchandises. Si vous n'êtes pas un consommateur ou si vous n'avez pas de for ordinaire en Allemagne, le for compétent pour tout litige ou toute réclamation découlant du présent contrat ou en relation avec celui-ci est le tribunal de Gütersloh (Allemagne). 
+
+§ 10 Divers
+La nullité d'une clause ou d'une partie du contrat n'affecte pas la validité des autres clauses ou parties du contrat. 
+
+État au 18 mars 2019</value>
+  </data>
+  <data name="APP_PRIVACY_POLICY" xml:space="preserve">
+    <value>Déclaration de confidentialité</value>
+  </data>
+  <data name="BARCODE_BOTTOM_TEXT" xml:space="preserve">
+    <value>Attendez la fin du scan automatique du code.</value>
+  </data>
+  <data name="BARCODE_TOP_TEXT" xml:space="preserve">
+    <value>Tenez la caméra à 5 cm environ au-dessus du code du logger. </value>
+  </data>
+  <data name="BTN_APPLY" xml:space="preserve">
+    <value>Appliquer</value>
+  </data>
+  <data name="BTN_BACK" xml:space="preserve">
+    <value>Retour</value>
+  </data>
+  <data name="BTN_CANCEL" xml:space="preserve">
+    <value>Annuler</value>
+  </data>
+  <data name="BTN_CLEAR" xml:space="preserve">
+    <value>Vider les champs</value>
+  </data>
+  <data name="BTN_HYBRID" xml:space="preserve">
+    <value>Hybride</value>
+  </data>
+  <data name="BTN_NO" xml:space="preserve">
+    <value>Non</value>
+  </data>
+  <data name="BTN_OK" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="BTN_RESET" xml:space="preserve">
+    <value>Réinitialiser</value>
+  </data>
+  <data name="BTN_SATELLITE" xml:space="preserve">
+    <value>Satellite</value>
+  </data>
+  <data name="BTN_SEND" xml:space="preserve">
+    <value>Envoyer</value>
+  </data>
+  <data name="BTN_SEND_TESTMAIL" xml:space="preserve">
+    <value>Vérifier l'accessibilité</value>
+  </data>
+  <data name="BTN_STREET" xml:space="preserve">
+    <value>Rue</value>
+  </data>
+  <data name="BTN_YES" xml:space="preserve">
+    <value>Oui</value>
+  </data>
+  <data name="CLOSE_APP" xml:space="preserve">
+    <value>Fermer SePem® Install Tool ?</value>
+  </data>
+  <data name="CONNECTION_CHECK" xml:space="preserve">
+    <value>Connexion au compte e-mail…</value>
+  </data>
+  <data name="EMAIL_CITY" xml:space="preserve">
+    <value>Ville :*</value>
+  </data>
+  <data name="EMAIL_COMPANY" xml:space="preserve">
+    <value>Entreprise :*</value>
+  </data>
+  <data name="EMAIL_COUNTRY" xml:space="preserve">
+    <value>Pays :</value>
+  </data>
+  <data name="EMAIL_EMAIL" xml:space="preserve">
+    <value>E-mail :*</value>
+  </data>
+  <data name="EMAIL_FIRSTNAME" xml:space="preserve">
+    <value>Prénom :*</value>
+  </data>
+  <data name="EMAIL_MANDATORY" xml:space="preserve">
+    <value>* Champs obligatoires</value>
+  </data>
+  <data name="EMAIL_NAME" xml:space="preserve">
+    <value>Nom :*</value>
+  </data>
+  <data name="EMAIL_NOT_COMPLETED" xml:space="preserve">
+    <value>Certains champs obligatoires n'ont pas été remplis. Complétez les informations et répétez l'envoi.</value>
+  </data>
+  <data name="EMAIL_NOT_COMPLETED_EMAIL_ADDRESS" xml:space="preserve">
+    <value>Adresse e-mail non valide. Corrigez l'adresse saisie.</value>
+  </data>
+  <data name="EMAIL_PHONE" xml:space="preserve">
+    <value>Téléphone :</value>
+  </data>
+  <data name="EMAIL_PLZ" xml:space="preserve">
+    <value>Code postal :</value>
+  </data>
+  <data name="EMAIL_SEND_SUCCESSFULLY" xml:space="preserve">
+    <value>L'e-mail a été envoyé avec succès.</value>
+  </data>
+  <data name="EMAIL_STREET" xml:space="preserve">
+    <value>Rue :</value>
+  </data>
+  <data name="EMAIL_SUBJECT" xml:space="preserve">
+    <value>SePem® Install Tool : demande client</value>
+  </data>
+  <data name="EMAIL_TEXT" xml:space="preserve">
+    <value>Votre message :*</value>
+  </data>
+  <data name="EMAIL_TEXT_END" xml:space="preserve">
+    <value>Cet e-mail a été créé par SePem® Install Tool. </value>
+  </data>
+  <data name="EMAIL_TITLE" xml:space="preserve">
+    <value>Contactez-nous par e-mail :</value>
+  </data>
+  <data name="ERROR" xml:space="preserve">
+    <value>Erreur</value>
+  </data>
+  <data name="ERROR_CHECK_AVAILABILITY_NETWORK" xml:space="preserve">
+    <value>Une erreur est survenue lors du contrôle de l'accessibilité. Vérifiez les paramètres réseau.</value>
+  </data>
+  <data name="ERROR_SENDING_EMAIL" xml:space="preserve">
+    <value>Une erreur est survenue lors de l'envoi de l'e-mail. Vérifiez les paramètres des e-mails.</value>
+  </data>
+  <data name="HEADLINE_ANSWER" xml:space="preserve">
+    <value>État</value>
+  </data>
+  <data name="HEADLINE_THUMBNAIL" xml:space="preserve">
+    <value>Foto</value>
+  </data>
+  <data name="HEADLINE_EMAILLIST" xml:space="preserve">
+    <value>Historique</value>
+  </data>
+  <data name="HEADLINE_EMAILLIST_FROM" xml:space="preserve">
+    <value>Historique à partir de {0}</value>
+  </data>
+  <data name="HEADLINE_EMAILSEND" xml:space="preserve">
+    <value>Envoyé</value>
+  </data>
+  <data name="HEADLINE_LOCATION" xml:space="preserve">
+    <value>Position</value>
+  </data>
+  <data name="HEADLINE_LOGGER" xml:space="preserve">
+    <value>Sélection du logger</value>
+  </data>
+  <data name="HEADLINE_SERIALNO" xml:space="preserve">
+    <value>N° de série</value>
+  </data>
+  <data name="HEADLINE_SIGNAL" xml:space="preserve">
+    <value>Puissance du signal</value>
+  </data>
+  <data name="LAB_DEVICE" xml:space="preserve">
+    <value>Appareil</value>
+  </data>
+  <data name="TAKE_FOTO_TEXT" xml:space="preserve">
+    <value>Sélectionnez ou prenez une photo</value>
+  </data>
+  <data name="FOTO_INFO_TEXT" xml:space="preserve">
+    <value>Aperçu des photos</value>
+  </data>
+  <data name="DELETE_FOTO_TITLE" xml:space="preserve">
+    <value>Supprimer une photo</value>
+  </data>
+  <data name="DELETE_FOTO_QUESTION" xml:space="preserve">
+    <value>Voulez-vous supprimer cette photo ?</value>
+  </data>
+  <data name="CAMERA_BUTTON_TEXT" xml:space="preserve">
+    <value>Appareil photo</value>
+  </data>
+  <data name="GALLERY_BUTTON_TEXT" xml:space="preserve">
+    <value>Galerie</value>
+  </data>
+  <data name="COMMENT_EDITOR_TEXT" xml:space="preserve">
+    <value>Commentaire</value>
+  </data>
+  <data name="LAB_DEVICE_NAME" xml:space="preserve">
+    <value>Type de logger</value>
+  </data>
+
+  <data name="ERROR_FOTOLIB_HEADER_TEXT" xml:space="preserve">
+    <value>Photothèque</value>
+  </data>
+  <data name="ERROR_FOTOLIB_TEXT" xml:space="preserve">
+    <value>Pas de photothèque accessible</value>
+  </data>
+  <data name="ACCESS_FOTOLIB_HEADER_TEXT" xml:space="preserve">
+    <value>Pas de photothèque accessible</value>
+  </data>
+  <data name="ACCESS_FOTOLIB_TEXT" xml:space="preserve">
+    <value>Aucune photo ne peut être sélectionnée.</value>
+  </data>
+
+  <data name="ERROR_FOTOCAMERA_HEADER_TEXT" xml:space="preserve">
+    <value>Appareil photo</value>
+  </data>
+  <data name="ERROR_FOTOCAMERA_TEXT" xml:space="preserve">
+    <value>Pas de caméra disponible</value>
+  </data>
+  <data name="ACCESS_FOTOCAMERA_HEADER_TEXT" xml:space="preserve">
+    <value>Consentement refusé.</value>
+  </data>
+  <data name="ACCESS_FOTOCAMERA_TEXT" xml:space="preserve">
+    <value>Aucune photo ne peut être prise.</value>
+  </data>
+  
+  <data name="LAB_EMAIL_SENDING" xml:space="preserve">
+    <value>Envoi de l'e-mail...</value>
+  </data>
+  <data name="LAB_INFORMATION" xml:space="preserve">
+    <value>Informations supplémentaires</value>
+  </data>
+  <data name="LAB_LOADING" xml:space="preserve">
+    <value>Chargement des données...</value>
+  </data>
+  <data name="LAB_LOCAL_DATABASE" xml:space="preserve">
+    <value>Base de données locale</value>
+  </data>
+  <data name="LAB_NO_CONNECTION_TO_SERVER" xml:space="preserve">
+    <value>Aucune connexion n'a pu être établie avec le serveur de Hermann Sewerin GmbH. Vérifiez la connexion Internet.</value>
+  </data>
+  <data name="LAB_NO_PERMISSION_FOR_CAMERA" xml:space="preserve">
+    <value>L'utilisation de la caméra doit être autorisée pour cette fonction. </value>
+  </data>
+  <data name="LAB_NO_PERMISSION_FOR_LOCATION" xml:space="preserve">
+    <value>Le partage de position doit être autorisé pour cette fonction.</value>
+  </data>
+  <data name="LAB_RESULT" xml:space="preserve">
+    <value>Résultat</value>
+  </data>
+  <data name="LAB_SENDING" xml:space="preserve">
+    <value>Contrôle de l'accessibilité...</value>
+  </data>
+  <data name="LAB_SERIAL_NO" xml:space="preserve">
+    <value>Numéro de série</value>
+  </data>
+  <data name="LAB_SERIAL_NO_COLON" xml:space="preserve">
+    <value>N° de série :</value>
+  </data>
+  <data name="LAB_SERIAL_NO_FAMILY_COLON" xml:space="preserve">
+    <value>Type de logger :</value>
+  </data>
+  <data name="LAB_SERIAL_NUMBER" xml:space="preserve">
+    <value>N° de série.</value>
+  </data>
+  <data name="LAB_SETTINGS" xml:space="preserve">
+    <value>Paramètres</value>
+  </data>
+  <data name="LAB_SETTINGS_DATABASE" xml:space="preserve">
+    <value>Base de données</value>
+  </data>
+  <data name="LAB_SIGNAL_STRENGTH" xml:space="preserve">
+    <value>Puissance du signal</value>
+  </data>
+  <data name="LAB_TESTING" xml:space="preserve">
+    <value>Contrôle de la connexion au serveur e-mail...</value>
+  </data>
+  <data name="LICENCE_INTERNET" xml:space="preserve">
+    <value>https://www.sewerin.com/cms/fileadmin/redakteure/media/Nutzungsbedingungen/Nutzungsbedingung_SePem300_App_fr.pdf</value>
+  </data>
+    
+  <data name="LOGGER_SEPEM01_NAME" xml:space="preserve">
+    <value>SePem® 01</value>
+  </data>
+  <data name="LOGGER_SEPEM05_NAME" xml:space="preserve">
+    <value>SePem® 100</value>
+  </data>
+  <data name="LOGGER_SEPEM06_NAME" xml:space="preserve">
+    <value>SePem® 150</value>
+  </data>
+  <data name="LOGGER_SEPEM07_NAME" xml:space="preserve">
+    <value>SePem® 1xx Sonder</value>
+  </data>
+  <data name="LOGGER_SEPEM08_NAME" xml:space="preserve">
+    <value>SePem® 01 US</value>
+  </data>
+  <data name="LOGGER_SEPEM09_NAME" xml:space="preserve">
+    <value>SePem® 155</value>
+  </data>
+  
+    
+  <data name="LOGGER_SEPEM01_GSM_NAME" xml:space="preserve">
+    <value>SePem® 01 GSM</value>
+  </data>
+    
+  <data name="LOGGER_SePem01_CR_NAME" xml:space="preserve">
+    <value>SePem® 01 CR</value>
+  </data>
+
+  <data name="LOGGER_SePem200_NAME" xml:space="preserve">
+    <value>SePem® 200</value>
+  </data>
+  <data name="LOGGER_SePem205_NAME" xml:space="preserve">
+    <value>SePem® 205</value>
+  </data>
+  <data name="LOGGER_SePem215_NAME" xml:space="preserve">
+    <value>SePem® 215</value>
+  </data>
+  <data name="LOGGER_SePem210_NAME" xml:space="preserve">
+    <value>SePem® 210</value>
+  </data>
+
+    
+  <data name="LOGGER_SEPEM300_NAME" xml:space="preserve">
+    <value>SePem® 300</value>
+  </data>
+  <data name="LOGGER_SEPEM305_NAME" xml:space="preserve">
+    <value>SePem® 305</value>
+  </data>
+  <data name="LOGGER_SEPEM350_NAME" xml:space="preserve">
+    <value>SePem® 350</value>
+    <comment>Nicht übersetzen</comment>
+  </data>
+  <data name="LOGGER_SEPEM351_NAME" xml:space="preserve">
+    <value>SePem® 351</value>
+    <comment>Nicht übersetzen</comment>
+  </data>
+  <data name="LOGGER_SEPEM350_HY_NAME" xml:space="preserve">
+    <value>SePem® 350 HY</value>
+    <comment>Nicht übersetzen</comment>
+  </data>
+  <data name="LOGGER_SEPEM351_HY_NAME" xml:space="preserve">
+    <value>SePem® 351 HY</value>
+    <comment>Nicht übersetzen</comment>
+  </data>
+  <data name="LOGGER_SEPEM355_NAME" xml:space="preserve">
+    <value>SePem® 355</value>
+    <comment>Nicht übersetzen</comment>
+  </data>
+  <data name="LOGGER_SEPEM355_HY_NAME" xml:space="preserve">
+    <value>SePem® 355 HY</value>
+    <comment>Nicht übersetzen</comment>
+  </data>
+    
+  <data name="LOGGER_SEPEM350_351_SPECIAL_NAME" xml:space="preserve">
+    <value>SePem® 350/351 Sondervariante</value>
+    <comment>Nicht übersetzen</comment>
+  </data>
+    
+  <data name="MANUFACTURER" xml:space="preserve">
+    <value>Hermann Sewerin GmbH</value>
+  </data>
+  <data name="MANUFACTURER_CITY" xml:space="preserve">
+    <value>33334 Gütersloh</value>
+  </data>
+  <data name="MANUFACTURER_COPYRIGHT" xml:space="preserve">
+    <value>© 2018 Hermann Sewerin GmbH</value>
+  </data>
+  <data name="MANUFACTURER_COUNTRY" xml:space="preserve">
+    <value>Allemagne</value>
+  </data>
+  <data name="MANUFACTURER_EMAIL" xml:space="preserve">
+    <value>info@sewerin.com</value>
+  </data>
+  <data name="MANUFACTURER_EMAIL_TEST" xml:space="preserve">
+    <value>martin.jakober@sewerin.com</value>
+  </data>
+  <data name="MANUFACTURER_INTERNET" xml:space="preserve">
+    <value>http://www.sewerin.com</value>
+  </data>
+  <data name="MANUFACTURER_STREET" xml:space="preserve">
+    <value>Robert-Bosch-Str. 3</value>
+  </data>
+  <data name="MANUFACTURER_TELEPHONE" xml:space="preserve">
+    <value>+49 5241 934-0</value>
+  </data>
+  <data name="MANUFACTURER_TITLE" xml:space="preserve">
+    <value>Fabricant</value>
+  </data>
+  <data name="MANUFACTURER_URL_NEWS" xml:space="preserve">
+    <value>https://www.sewerin.com/cms/en/info-centre/latest-news.html</value>
+  </data>
+  <data name="MENU" xml:space="preserve">
+    <value>Menu</value>
+  </data>
+  <data name="MSG_TITLE_ERROR" xml:space="preserve">
+    <value>Erreur</value>
+  </data>
+  <data name="MSG_TITLE_NOTE" xml:space="preserve">
+    <value>Remarque</value>
+  </data>
+  <data name="MSG_TITLE_QUESTION" xml:space="preserve">
+    <value>Question</value>
+  </data>
+  <data name="MSG_TITLE_WARNING" xml:space="preserve">
+    <value>Avertissement</value>
+  </data>
+  <data name="NOT_AVAILABLE" xml:space="preserve">
+    <value>–</value>
+  </data>
+  <data name="PAGE_CONTACT" xml:space="preserve">
+    <value>Contact</value>
+  </data>
+  <data name="PAGE_ENTER_SERIAL_NO" xml:space="preserve">
+    <value>Saisir le numéro de série</value>
+  </data>
+  <data name="PAGE_HISTORY" xml:space="preserve">
+    <value>Historique</value>
+  </data>
+  <data name="PAGE_INFO" xml:space="preserve">
+    <value>Infos</value>
+  </data>
+  <data name="PAGE_SETTINGS" xml:space="preserve">
+    <value>Paramètres</value>
+  </data>
+  <data name="PAGE_SHOW_LOGGER_INFO" xml:space="preserve">
+    <value>Informations sur le logger</value>
+  </data>
+  <data name="PAGE_TEST" xml:space="preserve">
+    <value>Accessibilité</value>
+  </data>
+  <data name="PAGE_TEST_DEMO" xml:space="preserve">
+    <value>Accessibilité (démo)</value>
+  </data>
+  <data name="PHONE_SEWERIN_ANDROID" xml:space="preserve">
+    <value>+4952419340</value>
+  </data>
+  <data name="PHONE_SEWERIN_IOS" xml:space="preserve">
+    <value>004952419340</value>
+  </data>
+  <data name="PORT_110" xml:space="preserve">
+    <value>110</value>
+  </data>
+  <data name="PORT_143" xml:space="preserve">
+    <value>143</value>
+  </data>
+  <data name="PORT_25" xml:space="preserve">
+    <value>25</value>
+  </data>
+  <data name="PORT_465" xml:space="preserve">
+    <value>465</value>
+  </data>
+  <data name="PORT_587" xml:space="preserve">
+    <value>587</value>
+  </data>
+  <data name="PORT_993" xml:space="preserve">
+    <value>993</value>
+  </data>
+  <data name="PORT_995" xml:space="preserve">
+    <value>995</value>
+  </data>
+  <data name="PRIVACY_POLICY_INTERNET" xml:space="preserve">
+    <value>Déclaration de confidentialité – SePem® Install Tool
+
+§ 1 Informations sur la collecte de données à caractère personnel et identification du fournisseur
+
+(1) La présente déclaration d'Hermann Sewerin GmbH contient des informations sur la collecte des données à caractère personnel lors de l'utilisation de SePem® Install Tool (ci-après « SePem App »). Les données à caractère personnel sont toutes les informations se rapportant à une personne physique identifiée ou identifiable (nom, adresse, adresse(s) e-mail, comportement des utilisateurs).
+
+(2) Le responsable du traitement au sens de l'article 4 alinéa 7 du Règlement Général sur la Protection des Données (RGPD) et du paragraphe 13 de la Loi allemande sur les télémédias (voir les Mentions légales) est : 
+Hermann Sewerin GmbH
+Robert-Bosch-Straße 3
+33334 Gütersloh
+Directeurs : 
+Dr. Dipl.-Phys. Swen Sewerin
+Dipl.-Wirt.-Inf. Benjamin Sewerin
+Tribunal chargé de tenir le registre : Tribunal d'instance de Gütersloh
+Numéro de registre : HRB 14 53
+
+Vous pouvez contacter nos responsables du traitement des données à l'adresse datenschutz@sewerin.com ou par courrier adressé « À l'attention du responsable du traitement des données ».
+
+3) Lorsque vous nous contactez par e-mail ou au moyen d'un formulaire de contact, nous conservons votre adresse e-mail, et, si vous les avez communiqués, votre nom, votre ville et votre numéro de téléphone, afin de pouvoir répondre à vos questions (conformément à l'Article 6, alinéa 1, phrase 1 lettres a, b, f du RGPD). Nous supprimons les données ainsi collectées lorsque l'enregistrement n'est plus nécessaire, ou limitons leur traitement, en cas d'obligation légale de conservation par exemple. 
+
+§ 2 Vos droits
+
+(1) Vous pouvez faire valoir les droits suivants auprès de nos responsables pour ce qui concerne vos données à caractère personnel : 
+– Droit d'accès
+– Droit de rectification ou à l'effacement
+– Droit à la limitation du traitement
+– Droit au retrait du consentement
+– Droit à l'opposition au traitement
+– Droit à la portabilité des données
+
+(2) Pour toutes les communications, demandes et tous les renseignements ainsi que pour retirer votre consentement ou vous opposer au traitement, contactez-nous à l'adresse datenschutz@sewerin.com ou à l'adresse indiquée au paragraphe 1 (2). 
+
+(3) Vous avez le droit de présenter une réclamation concernant le traitement de vos données à caractère personnel dans notre entreprise auprès de l'autorité de contrôle.
+
+§ 3 Collecte de données à caractère personnel lors de l'utilisation de SePem App
+
+(1) Lors du téléchargement de SePem App, les informations nécessaires sont transmises à Google Store, en particulier le nom d'utilisateur, l'adresse e-mail et le numéro de client votre compte, la date et l'heure de téléchargement, les informations de paiement et l'identifiant de l'appareil. Nous n'exerçons aucune influence sur cette collecte de données et n'en sommes pas responsables. Nous ne traitons les données que dans la mesure où elles sont nécessaires au téléchargement de SePem App sur votre appareil mobile (conformément à l'Article 6, alinéa 1, phrase 1, lettres b, f du RGPD).
+
+(2) Lors de l'utilisation de SePem App, nous collectons les données à caractère personnel décrites ci-après. Ces données sont nécessaires d'un point de vue technique pour permettre la bonne exécution des fonctions ainsi que la stabilité et la sécurité (conformément à l'Article 6, alinéa 1, phrase 1, lettre f du RGPD).
+– Adresse IP
+– Heure
+– Numéro de téléphone mobile
+– N° d'appareil final
+– Accès aux capteurs (du smartphone) 
+– Adresse MAC
+– Données de localisation (par GPS et adresse IP) 
+
+§ 4 Modes d'utilisation particuliers de SePem App
+
+(1) À la première utilisation de SePem App, une fenêtre pop-up vous demande l'autorisation d'utiliser votre position, le réseau (Internet), votre caméra, votre micro et les fonctions du téléphone (conformément à l'article 6, alinéa 1, phrase 1, lettre a du RGPD). Si vous ne donnez pas votre autorisation, nous n'utiliserons pas ces données. Dans ce cas, vous ne pourrez pas utiliser toutes les fonctions de notre application SePem App. Vous pouvez également donner votre autorisation ou la retirer par la suite dans les paramètres de SePem App.
+
+(2) Si vous autorisez l'accès à ces données, SePem App y accèdera et les enregistrera localement ou sur nos serveurs uniquement aux fins de l'exécution de la fonction (conformément à l'Article 6, alinéa 1, phrase 1, lettres a et f du RGPD). Nous traitons ces données de manière confidentielle et nous les effaçons si vous retirez votre autorisation à les utiliser ou si elles ne sont plus nécessaires à la fourniture des services et ne font l'objet d'aucune obligation légale de conservation.
+
+§ 5 Collecte de vos données de localisation
+
+(1) Notre offre comprend également des services dits Location Based Services, qui nous permettent de vous proposer des offres spéciales spécialement conçues pour votre position. Pour vous fournir ces fonctions de SePem App, nous collectons vos données de localisation par GPS et votre adresse IP sous forme anonymisée, si vous nous y avez expressément autorisé (conformément à l'article 6, alinéa 1, phrase 1, lettre a du RGPD).
+
+(2) Vous pouvez autoriser ou interdire ces fonctions à tous moments dans les paramètres de SePem App. Votre localisation ne nous est transmise que si, lorsque vous utilisez SePem App, vous utilisez à des fonctions que nous ne pouvons offrir que si nous connaissons votre localisation.
+
+(3) Vos données de localisation ne sont pas utilisées pour profiler vos déplacements à partir de votre position actuelle.
+
+§ 6 Cookies
+
+SePem App n'utilise pas de cookies. 
+
+§ 7 Sécurité des données
+
+Nous mettons en œuvre les mesures techniques appropriées pour garantir la sécurité des données, en particulier de vos données à caractère personnel lors de la transmission des données, et contre la divulgation à des tiers. Ces mesures sont mises à jour en permanence.</value>
+  </data>
+  <data name="PRIVACY_POLICY_TEXT" xml:space="preserve">
+    <value>Ouvrir la déclaration de confidentialité</value>
+  </data>
+  <data name="PRIVAT_POLICY_INTERNET" xml:space="preserve">
+    <value>https://www.sewerin.com/cms/fileadmin/redakteure/media/Datenschutz/Datenschutzerklaerung_SePem300_App_fr.pdf</value>
+  </data>
+  <data name="PRIVAT_POLICY_PDF" xml:space="preserve">
+    <value>Ouvrir la déclaration de confidentialité au format PDF</value>
+  </data>
+  <data name="PUT_OUT_LOGGER_MANUAL" xml:space="preserve">
+    <value>Saisir</value>
+  </data>
+  <data name="PUT_OUT_LOGGER_SCAN" xml:space="preserve">
+    <value>Scanner</value>
+  </data>
+  <data name="RESET_DATABASE" xml:space="preserve">
+    <value>Lors de la réinitialisation de la base de données, tous les paramètres de l'application et toutes les informations sur les loggers sont effacés. Poursuivre la réinitialisation de la base de données ?</value>
+  </data>
+  <data name="RESET_DATABASE_SUCCESS" xml:space="preserve">
+    <value>La base de données a été réinitialisée avec succès. </value>
+  </data>
+  <data name="RESET_DATABASE_TITLE" xml:space="preserve">
+    <value>Réinitialiser la base de données</value>
+  </data>
+  <data name="RESET_SETTINGS" xml:space="preserve">
+    <value>Lors de la réinitialisation des paramètres, tous les paramètres de l'application sauvegardés sont effacés. Poursuivre la réinitialisation des paramètres ?</value>
+  </data>
+  <data name="RESET_SETTINGS_SUCCESS" xml:space="preserve">
+    <value>Les paramètres ont été réinitialisés avec succès.</value>
+  </data>
+  <data name="RESET_SETTINGS_TITLE" xml:space="preserve">
+    <value>Réinitialiser les paramètres</value>
+  </data>
+  <data name="TEST_SMS" xml:space="preserve">
+    <value>SMS de test</value>
+  </data>
+  <data name="TEXT_LATITUDE" xml:space="preserve">
+    <value>Latitude</value>
+  </data>
+  <data name="TEXT_LONGITUDE" xml:space="preserve">
+    <value>Longitude</value>
+  </data>
+  <data name="TEXT_RECEIVED" xml:space="preserve">
+    <value>Reçu</value>
+  </data>
+  <data name="TEXT_SENT" xml:space="preserve">
+    <value>Envoyé</value>
+  </data>
+  <data name="TEXT_SIGNAL" xml:space="preserve">
+    <value>Puissance du signal</value>
+  </data>
+  <data name="TEXT_WAITING_TIME" xml:space="preserve">
+    <value>Fin du contrôle</value>
+  </data>
+  <data name="UNKNOWN" xml:space="preserve">
+    <value>Inconnue</value>
+  </data>
+  <data name="VERSION_APP_COLON" xml:space="preserve">
+    <value>Version de SePem® Install Tool :</value>
+  </data>
+  <data name="VERSION_DATABASE_COLON" xml:space="preserve">
+    <value>Version de la base de données (locale) :</value>
+  </data>
+  <data name="WAIT_FOR_ANSWER_BEFORE_SENDING_EMAIL" xml:space="preserve">
+    <value>Le test de l'accessibilité de ce logger est déjà en cours. Il peut prendre jusqu'à 20 minutes. Attendez ou entrez un autre logger.</value>
+  </data>
+  <data name="WRONG_SERIAL_NUMBER_DETECTED" xml:space="preserve">
+    <value>Numéro de série erroné. </value>
+  </data>
+  <data name="QUESTION_DISCARD_CHANGES_TITLE" xml:space="preserve">
+    <value>Avertissement</value>
+  </data>
+  <data name="QUESTION_DISCARD_CHANGES" xml:space="preserve">
+    <value>Jeter les données actuelles de l'enregistreur ?</value>
+  </data>
+  <data name="XML_UPLOAD_TITLE" xml:space="preserve">
+    <value>Statut des téléchargements d'enregistreurs</value>
+  </data>
+  <data name="XML_UPLOAD_OK" xml:space="preserve">
+    <value>Le téléchargement de l'enregistreur a été effectué avec succès</value>
+  </data>
+  <data name="XML_UPLOAD_ERROR" xml:space="preserve">
+    <value>Une erreur s'est produite lors du téléchargement de l'enregistreur. Il sera essayé de le télécharger à nouveau plus tard.</value>
+  </data>    
+  <data name="LAB_UPLOADING" xml:space="preserve">
+    <value>Les données sont transférées vers des serveurs...</value>
+  </data>
+  <data name="XML_LATE_UPLOAD_TEXT" xml:space="preserve">
+    <value>Certaines données de l'enregistreur n'ont pas pu être transférées au serveur. Cela est à nouveau possible (l'appareil est en ligne). Cela doit-il se faire maintenant ?</value>
+  </data> 
+  <data name="XML_NO_UPLOAD_TEXT" xml:space="preserve">
+    <value>L'appareil n'est actuellement PAS en ligne ! Les données de l'enregistreur seront sauvegardées et transférées lorsque l'appareil sera à nouveau en ligne.</value>
+  </data>
+    
+  <data name="SEND_BUTTON_LABEL" xml:space="preserve">
+    <value>Liste d'envoi</value>
+  </data>
+  <data name="LANGUAGE_LABEL" xml:space="preserve">
+    <value>Langue</value>
+  </data>
+</root>

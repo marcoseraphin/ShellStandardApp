@@ -8,7 +8,7 @@
              x:Class="ShellStandardApp.Views.StartPage">
 
     <Shell.SearchHandler>
-        <controls:PersonSearchHandler Placeholder="Search Person"
+        <controls:PersonSearchHandler Placeholder="{Binding LocalizedResources[SEARCH_HANDLER_TEXT]}"
                                       ShowsResults="true"
                                       SearchBoxVisibility="Expanded"
                                       ItemTemplate="{StaticResource PersonSearchTemplate}"
