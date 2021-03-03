@@ -60,7 +60,7 @@
   </resheader>
  
   <data name="APP_NAME" xml:space="preserve">
-    <value>Shell Beispiel App </value>
+    <value>Shell Beispiel App</value>
   </data> 
   <data name="LANGUAGE_LABEL" xml:space="preserve">
     <value>Sprache</value>
