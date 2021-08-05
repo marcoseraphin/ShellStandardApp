@@ -1,30 +1,45 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             Title="About Page"
-             x:Class="ShellStandardApp.Views.AboutPage">
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    x:Class="ShellStandardApp.Views.AboutPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:VapoliaSVG="clr-namespace:XamSvg.XamForms;assembly=XamSvg.XamForms"
+    Title="About Page">
     <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
-        <Label Text="About Page" FontSize="44"/>
-        <Label Text="Shell Sample App v1.0" FontSize="20" TextColor="Red" />
+        <Label FontSize="44" Text="About Page" />
+        <Label
+            FontSize="20"
+            Text="Shell Sample App v1.0"
+            TextColor="Red" />
 
-        <Label Grid.Row="2"
-             Grid.Column="0"
-             Margin="0,10,0,0"
-             Text="{Binding LocalizedResources[LANGUAGE_LABEL]}" />
+        <Label
+            Grid.Row="2"
+            Grid.Column="0"
+            Margin="0,10,0,0"
+            Text="{Binding LocalizedResources[LANGUAGE_LABEL]}" />
 
-       <Picker Grid.Row="2"
-               Grid.Column="1"
-               ItemsSource="{Binding PickerItemList}"
-               FontSize="14"
-               Margin="0,0,0,10"
-               WidthRequest="200"
-               ItemDisplayBinding="{Binding Value}"
-               SelectedItem="{Binding SelectedItem}" />
+        <Picker
+            Grid.Row="2"
+            Grid.Column="1"
+            Margin="0,0,0,10"
+            FontSize="14"
+            ItemDisplayBinding="{Binding Value}"
+            ItemsSource="{Binding PickerItemList}"
+            SelectedItem="{Binding SelectedItem}"
+            WidthRequest="200" />
 
-        <Button Text="{Binding LocalizedResources[BTN_SAVE]}"
-                    Margin="0,25,0,10"
-                    WidthRequest="120"
-                    HorizontalOptions="FillAndExpand"
-                    Command="{Binding OkButtonCommand}"/>
+        <Button
+            Margin="0,25,0,10"
+            Command="{Binding OkButtonCommand}"
+            HorizontalOptions="FillAndExpand"
+            Text="{Binding LocalizedResources[BTN_SAVE]}"
+            WidthRequest="120" />
+
+        <VapoliaSVG:SvgImage
+            Margin="10,20,10,10"
+            HorizontalOptions="CenterAndExpand"
+            Svg="appleicon.svg"
+            WidthRequest="200" />
+
     </StackLayout>
 </ContentPage>
