@@ -1,11 +1,12 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
-<Shell xmlns="http://xamarin.com/schemas/2014/forms"
-       xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-       xmlns:local="clr-namespace:ShellStandardApp.Views"
-       xmlns:controls="clr-namespace:ShellStandardApp.Controls;assembly=ShellStandardApp"
-       x:Class="ShellStandardApp.AppShell">
-    
-    <Shell.FlyoutHeader>
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="ShellStandardApp.AppShell"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:controls="clr-namespace:ShellStandardApp.Controls;assembly=ShellStandardApp"
+    xmlns:local="clr-namespace:ShellStandardApp.Views">
+
+    <!--<Shell.FlyoutHeader>
         <controls:FlyoutHeaderControl />
     </Shell.FlyoutHeader>
     <FlyoutItem Title="Start"
@@ -26,11 +27,19 @@
         <Tab>
             <ShellContent Title="Settings" Icon="tab_feed.png" Route="AboutPage"  ContentTemplate="{DataTemplate local:AboutPage}" />
         </Tab>
-    </FlyoutItem>
-    
-    <!--<TabBar>
-        <ShellContent Title="Start" Icon="tab_about.png" Route="StartPage" ContentTemplate="{DataTemplate local:StartPage}" />
-        <ShellContent Title="About" Icon="tab_feed.png" Route="AboutPage"  ContentTemplate="{DataTemplate local:AboutPage}" />
-    </TabBar>-->
+    </FlyoutItem>-->
+
+    <TabBar>
+        <ShellContent
+            Title="Start"
+            ContentTemplate="{DataTemplate local:StartPage}"
+            Icon="tab_about.png"
+            Route="StartPage" />
+        <ShellContent
+            Title="About"
+            ContentTemplate="{DataTemplate local:AboutPage}"
+            Icon="tab_feed.png"
+            Route="AboutPage" />
+    </TabBar>
 
 </Shell>
