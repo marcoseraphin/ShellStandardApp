@@ -25,7 +25,7 @@ namespace ShellStandardApp
 
 			MessagingCenter.Subscribe<StartPage, string>(this, "ChangeLanguage", async (sender, arg) =>
 			{
-				StartTab.Title = "123XXXXX";
+				StartTab.Title = "1234XXXXX";
 			});
 
 		}
