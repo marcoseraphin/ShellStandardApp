@@ -27,5 +27,10 @@ namespace ShellStandardApp.Views
 				startPageModel.SelectedPerson = null;
 			});
 		}
+
+		void Button_Clicked(System.Object sender, System.EventArgs e)
+		{
+			MessagingCenter.Send<StartPage, string>(this, "ChangeLanguage", "de");
+		}
 	}
 }

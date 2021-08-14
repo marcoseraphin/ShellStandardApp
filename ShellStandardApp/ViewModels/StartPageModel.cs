@@ -14,7 +14,7 @@ namespace ShellStandardApp.ViewModels
 		/// For routing reasons only
 		/// </summary>
 		private string ItemId;
-		
+
 		/// <summary>
 		/// Selected person
 		/// </summary>

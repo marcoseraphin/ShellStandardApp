@@ -19,6 +19,12 @@ namespace ShellStandardApp
 
 			// Register Route to Edit Page
 			Routing.RegisterRoute(nameof(EditPage), typeof(EditPage));
+
+			MessagingCenter.Subscribe<StartPage, string>(this, "ChangeLanguage", async (sender, arg) =>
+			{
+				StartTab.Title = "XXXXX";
+			});
+
 		}
 	}
 }
