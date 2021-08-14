@@ -10,6 +10,9 @@ namespace ShellStandardApp
 		private readonly Dictionary<string, Type> routes = new Dictionary<string, Type>();
 		public Dictionary<string, Type> Routes { get { return routes; } }
 
+		/// <summary>
+		/// ctor
+		/// </summary>
 		public AppShell()
 		{
 			InitializeComponent();
