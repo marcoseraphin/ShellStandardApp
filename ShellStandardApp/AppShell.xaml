@@ -60,7 +60,4 @@
             Icon="tab_feed.png"
             Route="AboutPage" />
     </Tab>
-
-
-
 </Shell>
