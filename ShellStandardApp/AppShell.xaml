@@ -29,10 +29,8 @@
         </Tab>
     </FlyoutItem>-->
 
-
-
     <!--  Working with TabBar  -->
-    <!--<TabBar>
+    <TabBar>
         <ShellContent
             x:Name="StartTab"
             Title="Start"
@@ -44,10 +42,10 @@
             ContentTemplate="{DataTemplate local:AboutPage}"
             Icon="tab_feed.png"
             Route="AboutPage" />
-    </TabBar>-->
+    </TabBar>
 
     <!--  NOT working with Tab  -->
-    <Tab>
+    <!--<Tab>
         <ShellContent
             x:Name="StartTab"
             Title="Start"
@@ -59,8 +57,5 @@
             ContentTemplate="{DataTemplate local:AboutPage}"
             Icon="tab_feed.png"
             Route="AboutPage" />
-    </Tab>
-
-
-
+    </Tab>-->
 </Shell>
