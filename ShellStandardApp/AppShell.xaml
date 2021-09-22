@@ -4,7 +4,9 @@
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:controls="clr-namespace:ShellStandardApp.Controls;assembly=ShellStandardApp"
-    xmlns:local="clr-namespace:ShellStandardApp.Views">
+    xmlns:local="clr-namespace:ShellStandardApp.Views"
+    FlyoutBehavior="Disabled"
+    Style="{StaticResource BaseStyle}">
 
     <!--<Shell.FlyoutHeader>
         <controls:FlyoutHeaderControl />
@@ -30,7 +32,7 @@
     </FlyoutItem>-->
 
     <!--  Working with TabBar  -->
-    <TabBar>
+    <TabBar Route="MainTabPage">
         <ShellContent
             x:Name="StartTab"
             Title="Start"
