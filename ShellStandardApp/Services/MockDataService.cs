@@ -13,6 +13,9 @@ namespace ShellStandardApp.Services
 	{
 		readonly List<Person> items;
 
+		/// <summary>
+		/// 
+		/// </summary>
 		public MockDataService()
 		{
 			items = new List<Person>()
