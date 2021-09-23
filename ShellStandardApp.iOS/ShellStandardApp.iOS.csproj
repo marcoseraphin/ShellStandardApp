@@ -125,6 +125,12 @@
     <Reference Include="System.Numerics.Vectors" />
   </ItemGroup>
   <ItemGroup>
+    <PackageReference Include="Xamarin.FFImageLoading">
+      <Version>2.4.11.982</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.FFImageLoading.Svg.Forms">
+      <Version>2.4.11.982</Version>
+    </PackageReference>
     <PackageReference Include="Xamarin.Forms" Version="5.0.0.2125" />
     <PackageReference Include="Xamarin.Essentials" Version="1.7.0" />
     <PackageReference Include="Vapolia.Xamarin.Svg.Forms">
@@ -150,8 +156,8 @@
     <BundleResource Include="Resources\gender%402x.png" />
     <BundleResource Include="Resources\gender%403x.png" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="DependencyServices\" />
-    <Folder Include="CustomRenderer\" />
+    <BundleResource Include="Resources\appleicon.svg" />
   </ItemGroup>
 </Project>

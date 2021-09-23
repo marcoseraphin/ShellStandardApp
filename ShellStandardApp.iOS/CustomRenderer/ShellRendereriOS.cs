@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Threading.Tasks;
+using FFImageLoading;
+using FFImageLoading.Svg.Platform;
 using ShellStandardApp.iOS.CustomRenderer;
 using UIKit;
 using Xamarin.Forms;
@@ -65,12 +67,15 @@ namespace ShellStandardApp.iOS.CustomRenderer
 					//SvgImageSource svgImageSource = SvgImageSource.FromResource("ShellStandardApp.SVGResource.appleicon.svg");
 					//UIImage uiImageView = await ImageService.Instance.LoadEmbeddedResource("resource://appleicon.svg").WithCustomDataResolver(new SvgDataResolver(64, 0, true)).AsUIImageAsync();
 
-					var svgImageSource = SvgImageSource.FromResource("resource://ShellStandardApp.SVGResource.appleicon.svg");
-					var uiImageView = await GetUIImageFromImageSourceAsync(svgImageSource);
+					//var svgImageSource = SvgImageSource.FromResource("resource://ShellStandardApp.SVGResource.appleicon.svg");
+					//var uiImageView = await GetUIImageFromImageSourceAsync(svgImageSource);
 
+					UIImage uiImage = await ImageService.Instance.LoadFile("appleicon.svg")
+					.WithCustomDataResolver(new SvgDataResolver(15, 15, true))
+					.AsUIImageAsync();
 
 					// TODO: No SVG image wil be displayed because uiImageView in NULL
-					//tabbaritem.Image = uiImageView;
+					tabbaritem.Image = uiImage;
 
 
 					tabbaritem.Image = tabbaritem.Image?.ImageWithRenderingMode(UIImageRenderingMode.AlwaysTemplate);
